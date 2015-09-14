@@ -6,11 +6,18 @@
   "private": true,
   "dependencies": {
     "body-parser": "^1.4.3",
-    "express": "^4.4.5"
+    "express": "^4.4.5",
+    "react": "^0.13.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "jsdom": ">= 0.1.23 < 4.0.0",
+    "mocha": "^2.3.2",
+    "react-tools": "^0.13.3",
+    "should": "^7.1.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:babel/register --recursive",
     "start": "node server.js"
   },
   "repository": {
@@ -28,7 +35,7 @@
     "url": "https://github.com/reactjs/react-tutorial/issues"
   },
   "homepage": "https://github.com/reactjs/react-tutorial",
-  "engines" : {
-    "node" : "0.12.x"
+  "engines": {
+    "node": "0.12.x"
   }
 }
